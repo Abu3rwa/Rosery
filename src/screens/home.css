@@ -1,0 +1,100 @@
+* {
+  font-family: serif;
+}
+.link {
+  /* text-decoration: none !important; */
+  font-weight: bold;
+  color: rgb(0, 110, 255);
+}
+.main-bg {
+  color: #851c3bc2;
+}
+
+.home {
+  height: calc(100vh - 50px);
+  /* width: 100%; */
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.hero {
+  position: absolute;
+  top: 155px;
+  /* right: 50%; */
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+.hero > div {
+  background: rgb(149 45 95 / 62%);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  /* width: 80vw; */
+}
+
+.home .img-container {
+  padding: 0;
+}
+.home .background-img {
+  height: 100vh;
+  object-fit: cover;
+  width: 100vw;
+  border: none;
+  padding: inherit;
+}
+.moto {
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.hero h1,
+.hero h5 {
+  font-weight: bold;
+  margin: 3px;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+}
+.hero h1 {
+  text-decoration: underline;
+  font-weight: 800;
+  font-family: system-ui;
+  color: antiquewhite;
+}
+.admission-btn {
+  transition: all ease-in-out 0.5s;
+  border: 2px rgb(253, 253, 253) double;
+  margin: 5px;
+  width: 150px;
+  font-weight: 600;
+  color: white;
+  font-size: 20px;
+}
+.hero .login-btn {
+  border: none;
+  background: var(--dark-rose);
+  color: #fffcfd;
+  width: 70px;
+  border: 1px rgb(253, 253, 253) double;
+  font-weight: bold;
+  font-size: 18px;
+}
+.admission-btn:hover {
+  color: white;
+  width: 160px;
+  font-weight: 600;
+  background: var(--dark-rose);
+}
+
+.home .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}

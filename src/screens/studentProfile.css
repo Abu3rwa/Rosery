@@ -1,0 +1,25 @@
+.profile {
+  min-height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  margin-top: 50px;
+}
+.profile img {
+  width: 150px;
+  height: 150px;
+  clip-path: circle(50%);
+}
+.profile .main-info {
+  justify-content: start;
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  background: #b1b1b124;
+  position: relative;
+}
+.profile .main-info .logout {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}

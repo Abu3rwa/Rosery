@@ -1,0 +1,35 @@
+.nav-bar {
+  height: 50px;
+  width: 100vw;
+  margin: 0;
+  background-color: var(--dark-rose);
+  position: absolute;
+  top: 0;
+  z-index: 9999;
+  align-items: center;
+}
+.links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+.title-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.nav-bar .title {
+  color: #ffffff;
+  font-weight: 600;
+}
+.nav-bar .links a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  font-weight: bold;
+  transition: all ease-in-out 0.5s;
+}
+.nav-bar .links a:hover {
+  border-bottom: 1px coral double;
+}
