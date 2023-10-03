@@ -2,7 +2,7 @@
   height: 50px;
   width: 100vw;
   margin: 0;
-  background-color: var(--dark-rose);
+  background-color: rgb(133 28 59);
   position: fixed;
   top: 0;
   z-index: 9999;

@@ -11,11 +11,6 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
 
   function handleSubmit(e) {
-    setError(true);
-    setTimeout(() => {
-      setError(false);
-    }, 5000);
-
     setLoading(true);
     e.preventDefault();
     axiosInstance
@@ -31,6 +26,9 @@ const Login = () => {
       })
       .catch((error) => {
         setError(error?.response?.data.errors.message);
+        setTimeout(() => {
+          setError("");
+        }, 5000);
       });
   }
   return (
@@ -64,7 +62,7 @@ const Login = () => {
               onChange={(e) => setAcess(e.target.value)}
             />
           </div>
-          {error && error && (
+          {error && (
             <div className="text-center">
               <small className="text-danger my-2 text-center">{error}</small> -{" "}
               <Link to="/">Support</Link>
