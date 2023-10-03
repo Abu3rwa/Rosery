@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import Academics from "../components/Academics";
 import { axiosInstance } from "../config/axiosInstance";
 import logo from "../assets/logo.jpg";
 import "./studentProfile.css";
@@ -42,40 +43,35 @@ function StudentProfile() {
         </button>
         <img src={logo} alt="" />
         <h5 className="tx-dark">
-          <span className="md-rose  ">Name: </span>
+          <span className="md-rose  ">Name | </span>
           {profile.name}
         </h5>
         <h5 className="tx-dark">
-          <span className="md-rose  ">Grade: </span>
+          <span className="md-rose  ">Grade | </span>
           {profile.grade}
         </h5>
         <h5 className="tx-dark">
-          <span className="md-rose  ">Address: </span>
+          <span className="md-rose  ">Address | </span>
           {profile.address}
         </h5>
         <h5 className="tx-dark">
-          <span className="md-rose  ">Age:</span> {profile.age}
+          <span className="md-rose  ">Age |</span> {profile.age}
         </h5>
         <h5 className="tx-dark">
-          <span className="md-rose  ">Email:</span> {profile.email}
+          <span className="md-rose  ">Email |</span> {profile.email}
         </h5>
         <h5 className="tx-dark">
-          <span className="md-rose  ">Phone:</span> {profile.phoneNumber}
+          <span className="md-rose  ">Phone |</span> {profile.phoneNumber}
         </h5>
         <h5 className="tx-dark mt-3">
-          <span className="md-rose  ">Subjects:</span> <br />
+          <span className="md-rose  ">Subjects |</span> <br />
           {profile.subjects?.map((subject) => (
-            <span>{subject} - </span>
+            <span key={subject}>{subject} - </span>
           ))}
         </h5>
         {/* <h5>{profile.grade}</h5> */}
       </div>
-      <div className="academics col-12 col-md-9">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ut
-        voluptatibus eveniet aut tempore inventore esse error doloribus animi,
-        dicta in! Architecto itaque non voluptatum, assumenda delectus aut!
-        Animi, voluptatem?
-      </div>
+      <Academics />
     </div>
   );
 }

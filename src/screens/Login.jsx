@@ -30,7 +30,7 @@ const Login = () => {
         setLoading(false);
       })
       .catch((error) => {
-        console.log(error);
+        setError(error?.response?.data.errors.message);
       });
   }
   return (
@@ -64,10 +64,11 @@ const Login = () => {
               onChange={(e) => setAcess(e.target.value)}
             />
           </div>
-          {error && (
-            <small className="text-danger my-2 text-center">
-              Invalid Key.{" "}
-            </small>
+          {error && error && (
+            <div className="text-center">
+              <small className="text-danger my-2 text-center">{error}</small> -{" "}
+              <Link to="/">Support</Link>
+            </div>
           )}
           <div className="actions">
             <Link to="/" className="link">
