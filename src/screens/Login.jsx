@@ -16,11 +16,8 @@ const Login = () => {
     axiosInstance
       .post("/auth", { access })
       .then((data) => {
-        localStorage.setItem(
-          "token",
-
-          data.data.token
-        );
+        console.log(data);
+        localStorage.setItem("token", data.data.token);
         data.data.token && window.location.replace("/profile");
         setLoading(false);
       })
