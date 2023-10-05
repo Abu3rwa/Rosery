@@ -7,3 +7,87 @@
   border-radius: 10px;
   background: #f4f4f4;
 }
+.academics .subject {
+  /* background: radial-gradient(#851c3b, transparent); */
+  background: white;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.academics .subject .homeworks-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  cursor: pointer;
+  padding: 3px;
+  color: white;
+  background: #851c3bd1;
+  border-radius: 5px;
+}
+.academics .subject li span {
+  color: rgb(245, 222, 222);
+}
+.academics .subject li > span {
+  color: white;
+}
+.academics .subject li:hover {
+  background: #c72757;
+}
+
+.academics .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  position: sticky;
+  flex-wrap: wrap;
+  background: #ffffff;
+  border: 1px #dfc3cb solid;
+  top: 50px;
+  width: 100%;
+  padding: 0;
+}
+.academics .list li {
+  color: #851c3b;
+  list-style: none;
+  /* font-size: 13px; */
+  cursor: pointer;
+  padding: 2px;
+  min-width: 50px;
+  /* box-shadow: -3px 5px 20px -4px rgba(0, 0, 0, 0.75); */
+  border-radius: 5px;
+  text-align: center;
+  flex-grow: 1;
+  margin: 0 2px;
+  padding: 5px;
+}
+.academics .list li:hover {
+  background-color: #851c3b;
+
+  color: white;
+}
+.academics .list .active {
+  background-color: #851c3b;
+
+  color: white;
+}
+.academics .new,
+.to-be-corrected,
+.finished {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 2px;
+}
+.academics .new {
+  background-color: rgb(0 255 67);
+}
+.academics .to-be-corrected {
+  color: #ff9900;
+}
+.academics .finished {
+  color: #07ff00;
+}
