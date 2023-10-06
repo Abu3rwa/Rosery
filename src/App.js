@@ -10,12 +10,14 @@ import Navbar from "./components/Navbar";
 import HomeworkScreen from "./screens/HomeworkScreen";
 import StudentProfile from "./screens/StudentProfile";
 import Login from "./screens/Login";
+import StudentAddmission from "./screens/StudentAddission";
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path="/" exact element={<HomeScreen />} />
+        <Route path="/addmission" exact element={<StudentAddmission />} />
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<StudentProfile />} />
         <Route path="/homework" element={<HomeworkScreen />} />

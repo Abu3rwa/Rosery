@@ -1,0 +1,68 @@
+.student-addmission {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+  flex-direction: column;
+  position: relative;
+}
+.student-addmission form {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  /* height: 50%; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 1px 37px 0px 16px rgb(133 28 59);
+}
+
+.student-addmission h2 {
+  color: var(--md-rose);
+  font-weight: bold;
+  font-family: monospace;
+}
+.student-addmission form input {
+  border: 1px #851c3b solid;
+  outline: none;
+}
+
+.student-addmission .actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.student-addmission .actions button {
+  border: none;
+  background: #380a2f;
+  color: #fffcfd;
+  font-weight: bold;
+  font-size: 18px;
+}
+.student-addmission .error-box {
+  background-color: #ff0909;
+  /* box-shadow: 1px -2px 54px 6px rgb(133 28 59); */
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  margin: 0;
+
+  transform: translateY(-100px);
+  transition: all ease-in 0.5s;
+  top: -11px;
+}
+.student-addmission .showError {
+  transform: translateY(0);
+}
+.student-addmission .loading {
+  color: #00d94f;
+  height: fit-content;
+  position: absolute;
+  margin: 0;
+  padding: 10px;
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+}

@@ -76,7 +76,12 @@ function StudentProfile() {
 
             {/* <h5>{profile.grade}</h5> */}
           </div>
-          <Academics profile={profile} active={active} />
+          <Academics
+            profile={profile}
+            active={active}
+            // homeWorks={homeWorks}
+            // setHomeworks={setHomeworks}
+          />
         </div>
       )}
     </>

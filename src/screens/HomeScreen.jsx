@@ -17,7 +17,9 @@ export default function HomeScreen() {
           </div>
           <img src={logo} className="logo-md" alt="logo" />
           <div>
-            <button className="btn btn-outline admission-btn">Admission</button>
+            <Link className="btn btn-outline admission-btn" to="addmission">
+              Admission
+            </Link>
 
             <Link className="link login-btn btn ms-2" to="login">
               login
