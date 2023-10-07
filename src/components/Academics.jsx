@@ -36,7 +36,7 @@ function Academics({ profile }) {
               }}
             >
               {" "}
-              {subject}
+              {subject} ;;
             </li>
           ))}
         </ul>

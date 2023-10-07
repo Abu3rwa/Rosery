@@ -10,7 +10,6 @@ import { Avatar } from "@mui/material";
 function StudentProfile() {
   const [active, setActive] = useState([]);
   const [profile, setProfile] = useState([]);
-
   function loadProfile() {
     axiosInstance
       .get("/auth/me", {
@@ -21,9 +20,11 @@ function StudentProfile() {
         },
       })
       .then((profile) => {
-        console.log(profile.data);
-        profile.data && setProfile(profile.data);
-        localStorage.setItem("active", profile?.subjects[0]);
+        if (profile.data) {
+          setProfile(profile.data);
+
+          localStorage.setItem("active", profile?.subjects[0]);
+        }
       })
       .catch((error) => {
         console.log(error);
@@ -31,7 +32,6 @@ function StudentProfile() {
   }
   useEffect(() => {
     setActive(localStorage.getItem("active"));
-
     loadProfile();
   }, [active]);
   return (

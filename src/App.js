@@ -10,7 +10,7 @@ import Navbar from "./components/Navbar";
 import HomeworkScreen from "./screens/HomeworkScreen";
 import StudentProfile from "./screens/StudentProfile";
 import Login from "./screens/Login";
-import StudentAddmission from "./screens/StudentAddission";
+import StudentAddmission from "./screens/StudentAddmission";
 function App() {
   return (
     <BrowserRouter>

@@ -1,10 +1,11 @@
 .student-addmission {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   margin-top: 60px;
   flex-direction: column;
   position: relative;
+  margin-bottom: 100px;
 }
 .student-addmission form {
   background: #ffffff;
@@ -15,7 +16,7 @@
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  box-shadow: 1px 37px 0px 16px rgb(133 28 59);
+  box-shadow: 1px 37px 0px 10px rgb(133 28 59);
 }
 
 .student-addmission h2 {
@@ -42,27 +43,28 @@
 }
 .student-addmission .error-box {
   background-color: #ff0909;
-  /* box-shadow: 1px -2px 54px 6px rgb(133 28 59); */
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
-  position: absolute;
+  position: fixed;
   margin: 0;
-
   transform: translateY(-100px);
   transition: all ease-in 0.5s;
-  top: -11px;
+  top: 50px;
 }
 .student-addmission .showError {
+  box-shadow: 1px -2px 54px 6px rgb(133 28 59);
   transform: translateY(0);
 }
 .student-addmission .loading {
   color: #00d94f;
   height: fit-content;
-  position: absolute;
+  position: fixed;
   margin: 0;
   padding: 10px;
   border-radius: 10px;
-  left: 50%;
-  top: 50%;
+  /* left: 50%; */
+  top: 30vh;
+  width: 100px !important;
+  height: 100px !important;
 }

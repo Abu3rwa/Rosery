@@ -33,11 +33,12 @@ const StudentAddmission = () => {
     e.preventDefault();
     axiosInstance
       .post("/students/create", body)
-      .then((data) => {
-        console.log(data);
-        localStorage.setItem("token", data.data.token);
-        // data.data.token && window.location.replace("/profile");
-        setLoading(false);
+      .then((res) => {
+        if (res.data.token) {
+          localStorage.setItem("token", res.data.token);
+          window.location.replace("/profile");
+          setLoading(false);
+        }
       })
       .catch((error) => {
         setError(error?.response?.data.errors);
@@ -153,13 +154,13 @@ const StudentAddmission = () => {
           </div>
         </form>
 
-        <div className={true ? "error-box showError" : "error-box"}>
+        <div className={error ? "error-box showError" : "error-box"}>
           <h5 className="text-white my-2 text-center">
             Student already exists
           </h5>{" "}
           <Link to="/">Support</Link>
         </div>
-        {loading && <CircularProgress className="loading" />}
+        {loading && <CircularProgress size={50} className="loading" />}
       </div>
     </>
   );
