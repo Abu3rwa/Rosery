@@ -62,7 +62,7 @@ const StudentAddmission = () => {
           onSubmit={handleSubmit}
         >
           {/* //////////////////////////////// */}
-          <div className="form-group col-11 mt-3">
+          <div className="form-group col-12 mt-3">
             <label className="form-color">Student's Name</label>
             <input
               className="form-control mt-2"
@@ -74,7 +74,7 @@ const StudentAddmission = () => {
             />
           </div>
           {/* //////////////////////////////// */}
-          <div className="form-group col-11 mt-3">
+          <div className="form-group col-12 mt-3">
             <label className="form-color">Email</label>
             <input
               className="form-control mt-2"
@@ -86,7 +86,7 @@ const StudentAddmission = () => {
             />
           </div>
           {/* //////////////////////////////// */}
-          <div className="form-group col-11 mt-3">
+          <div className="form-group col-12 mt-3">
             <label className="form-color">Phone</label>
             <input
               className="form-control mt-2"
@@ -98,7 +98,7 @@ const StudentAddmission = () => {
             />
           </div>
           {/* //////////////////////////////// */}
-          <div className="form-group col-11 mt-3">
+          <div className="form-group col-12 mt-3">
             <label className="form-color">Age</label>
             <input
               className="form-control mt-2"
@@ -109,7 +109,7 @@ const StudentAddmission = () => {
               onChange={(e) => setAge(e.target.value)}
             />
           </div>
-          <div className="form-group col-11 mt-3">
+          <div className="form-group col-12 mt-3">
             <label className="form-color">Grade</label>
             <input
               className="form-control mt-2"
@@ -121,7 +121,7 @@ const StudentAddmission = () => {
             />
           </div>
           {/* //////////////////////////////// */}
-          <div className="form-group col-11 mt-3">
+          <div className="form-group col-12 mt-3">
             <label className="form-color">address</label>
             <input
               className="form-control mt-2"
@@ -133,7 +133,7 @@ const StudentAddmission = () => {
             />
           </div>
           {/* //////////////////////////////// */}
-          <div className="form-group col-11 mt-3">
+          <div className="form-group col-12 mt-3">
             <label className="form-color">subjects</label>
             <input
               className="form-control mt-2"
