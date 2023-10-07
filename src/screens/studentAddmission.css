@@ -51,20 +51,22 @@
   transform: translateY(-100px);
   transition: all ease-in 0.5s;
   top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
 }
 .student-addmission .showError {
   box-shadow: 1px -2px 54px 6px rgb(133 28 59);
   transform: translateY(0);
 }
-.student-addmission .loading {
-  color: #00d94f;
-  height: fit-content;
-  position: fixed;
-  margin: 0;
-  padding: 10px;
-  border-radius: 10px;
-  /* left: 50%; */
-  top: 30vh;
-  width: 100px !important;
-  height: 100px !important;
+
+.student-addmission .error-box a {
+  background: white;
+  padding: 5px;
+  font-size: 20px;
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
 }

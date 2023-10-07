@@ -36,7 +36,7 @@ function Academics({ profile }) {
               }}
             >
               {" "}
-              {subject} ;;
+              {subject}
             </li>
           ))}
         </ul>
@@ -54,7 +54,7 @@ function Academics({ profile }) {
         ) : (
           <h2>No Homework</h2>
         )}
-        {/* <ul className="homeworks-list">
+        <ul className="homeworks-list">
           <h3 className="dark-rose">today's Homeworks</h3>
           <li>
             <span>What are you?</span>
@@ -137,7 +137,7 @@ function Academics({ profile }) {
             <span>8/10/2013</span>
             <span>9/10/2013</span> <CheckIcon className="finished" />
           </li>
-        </ul> */}
+        </ul>
       </div>
     </div>
   );

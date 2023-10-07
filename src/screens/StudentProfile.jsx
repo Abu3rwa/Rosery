@@ -6,11 +6,13 @@ import Academics from "../components/Academics";
 import { axiosInstance } from "../config/axiosInstance";
 import logo from "../assets/logo.jpg";
 import "./studentProfile.css";
-import { Avatar } from "@mui/material";
+import { Avatar, CircularProgress } from "@mui/material";
 function StudentProfile() {
   const [active, setActive] = useState([]);
   const [profile, setProfile] = useState([]);
+  const [loading, setLoading] = useState([]);
   function loadProfile() {
+    setLoading(true);
     axiosInstance
       .get("/auth/me", {
         // const profile = axios.get("http://localhost:8000/api/auth/me", {
@@ -22,6 +24,7 @@ function StudentProfile() {
       .then((profile) => {
         if (profile.data) {
           setProfile(profile.data);
+          setLoading(false);
 
           localStorage.setItem("active", profile?.subjects[0]);
         }
@@ -36,7 +39,7 @@ function StudentProfile() {
   }, [active]);
   return (
     <>
-      {profile && (
+      {profile && !loading ? (
         <div className="profile row">
           <div className="main-info col-12 col-md-3">
             <button
@@ -82,6 +85,10 @@ function StudentProfile() {
             // homeWorks={homeWorks}
             // setHomeworks={setHomeworks}
           />
+        </div>
+      ) : (
+        <div className="loading-parent">
+          <CircularProgress size={50} className="loading" />
         </div>
       )}
     </>

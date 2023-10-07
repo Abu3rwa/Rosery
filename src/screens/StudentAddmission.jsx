@@ -37,12 +37,19 @@ const StudentAddmission = () => {
         if (res.data.token) {
           localStorage.setItem("token", res.data.token);
           window.location.replace("/profile");
+          console.log(res.data);
           setLoading(false);
         }
       })
       .catch((error) => {
-        setError(error?.response?.data.errors);
-        console.log(error?.response?.data.msg);
+        if (error?.response?.data.msg) {
+          setLoading(false);
+          setError(error?.response?.data.msg);
+          console.log(error?.response?.data.msg);
+          setTimeout(() => {
+            setError("");
+          }, 5000);
+        }
       });
   }
   return (
@@ -155,9 +162,7 @@ const StudentAddmission = () => {
         </form>
 
         <div className={error ? "error-box showError" : "error-box"}>
-          <h5 className="text-white my-2 text-center">
-            Student already exists
-          </h5>{" "}
+          <h5 className="text-white my-2 text-center me-3">{error}</h5>{" "}
           <Link to="/">Support</Link>
         </div>
         {loading && <CircularProgress size={50} className="loading" />}

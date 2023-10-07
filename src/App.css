@@ -67,3 +67,23 @@
 .tx-dark {
   color: rgb(61, 61, 61);
 }
+.loading {
+  color: var(--light-rose) !important;
+  height: fit-content;
+  position: fixed;
+  margin: 0;
+  padding: 10px;
+  border-radius: 10px;
+  /* left: 50%; */
+  top: 30vh;
+  width: 100px !important;
+  height: 100px !important;
+}
+.loading-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #851c3b00;
+}
